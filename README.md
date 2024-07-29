@@ -32,13 +32,17 @@ Throughout this project, we follow the PACE framework: Plan, Analyze, Construct,
 
 ## Construct
 **Feature Engineering:** We extracted text length as a new feature and encoded categorical variables.
+
 **Text Tokenization:** We used CountVectorizer to tokenize the video_transcription_text column by breaking each video's transcription into both 2-grams and 3-grams, and selected the 15 most frequently occurring tokens as features.
+
 **Model Building:** We built and evaluated Random Forest and XGBoost models.
 
 ## Execute
 **Model Evaluation:** Random Forest was selected as the champion model due to its better recall score.
+
 **Final Model:** We used the champion model to predict on test data and visualized feature importances.
-Installation
+
+## Installation
 
 To replicate this analysis, you'll need to install the following packages:
 
@@ -55,5 +59,7 @@ Load the dataset and run the Jupyter notebooks provided in the repository to fol
 # Conclusion
 
 **Recommendation:** The model performed well and is recommended for use.
+
 **Model Insights:** The model's predictions are primarily based on user engagement metrics.
+
 **Future Improvements:** The current model performs nearly perfectly. However, additional features like the number of reports per video and total reports by each author could be beneficial.
